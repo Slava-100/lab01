@@ -32,8 +32,8 @@ hunter_add_package(nlohmann_json)
 find_package(nlohmann_json CONFIG REQUIRED)
 
 add_library(${PROJECT_NAME} STATIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/header.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/students_from_json.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/students_from_json.hpp
         )
 
 add_executable(demo

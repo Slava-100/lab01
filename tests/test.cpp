@@ -1,4 +1,4 @@
-// Copyright 2020 andreymuskat <andreymuskat@yandex.ru>
+// Copyright 2020 Slava-100 <svat.strel.2001@gmail.com>
 
 #include <gtest/gtest.h>
 

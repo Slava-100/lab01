@@ -1,4 +1,4 @@
-// Copyright 2020 andreymuskat <andreymuskat@yandex.ru>
+// Copyright 2020 Slava-100 <svat.strel.2001@gmail.com>
 
 #ifndef INCLUDE_STUDENTS_FROM_JSON_HPP_
 #define INCLUDE_STUDENTS_FROM_JSON_HPP_

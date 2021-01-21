@@ -1,4 +1,4 @@
-// Copyright 2020 Your Name <your_email>
+// Copyright 2020 andreymuskat <andreymuskat@yandex.ru>
 
 #include <any>
 #include <iomanip>
@@ -53,6 +53,13 @@ std::vector<Student> ParseJSON(std::istream& jsonStream) {
 
   std::vector<Student> result;
 
+  if (!jsonData.at("items").is_array())
+    throw std::runtime_error("Items must be array");
+
+  if (jsonData.at("items").size() != jsonData.at("_meta").at("count"))
+    throw std::runtime_error(
+        "Mismatching _meta:count with real items array size");
+
   for (const auto& item : jsonData.at("items")) {
     auto student = item.get<Student>();
     result.push_back(student);
@@ -92,7 +99,7 @@ void Print(const Student& student, std::ostream& out) {
   } else {
     out << "|" << std::setw(MaxDebtWidth) << std::left
         << (std::to_string(
-            std::any_cast<std::vector<std::string>>(student.debt).size()) +
+                std::any_cast<std::vector<std::string>>(student.debt).size()) +
             " items")
         << "|";
   }
@@ -123,6 +130,3 @@ void Print(const std::vector<Student>& students, std::ostream& out) {
     out << std::endl << tableSeparator << std::endl;
   }
 }
-
-
-

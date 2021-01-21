@@ -1,7 +1,7 @@
-// Copyright 2020 Your Name <your_email>
+// Copyright 2020 andreymuskat <andreymuskat@yandex.ru>
 
-#ifndef INCLUDE_HEADER_HPP_
-#define INCLUDE_HEADER_HPP_
+#ifndef INCLUDE_STUDENTS_FROM_JSON_HPP_
+#define INCLUDE_STUDENTS_FROM_JSON_HPP_
 
 #include <any>
 #include <ostream>
@@ -26,5 +26,4 @@ void Print(const Student &student, std::ostream &out);
 
 void Print(const std::vector<Student> &students, std::ostream &out);
 
-#endif  // INCLUDE_HEADER_HPP_
-
+#endif  // INCLUDE_STUDENTS_FROM_JSON_HPP_
